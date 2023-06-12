@@ -1,0 +1,479 @@
+zabbix_export:
+  version: '6.4'
+  template_groups:
+    - uuid: 737a3413107b407aa81d6ba319dac558
+      name: Templates_Custom
+  templates:
+    - uuid: 2a304559a8be41928d133260ad0290a3
+      template: 'Freeradius3 by Zabbix agent'
+      name: 'Freeradius3 by Zabbix agent'
+      groups:
+        - name: Templates_Custom
+      items:
+        - uuid: aa0a59be65cd4f1fac78df430caf186b
+          name: FreeRADIUS-Total-Accounting-Requests
+          key: 'radius.acct_status[FreeRADIUS-Total-Accounting-Requests,{$RADIUS_SECRET}]'
+          delay: '30'
+          description: |
+            FreeRADIUS-Total-Accounting-Requests
+            FreeRADIUS-Total-Accounting-Responses
+            FreeRADIUS-Total-Acct-Duplicate-Requests
+            FreeRADIUS-Total-Acct-Malformed-Requests
+            FreeRADIUS-Total-Acct-Invalid-Requests
+            FreeRADIUS-Total-Acct-Dropped-Requests
+            FreeRADIUS-Total-Acct-Unknown-Types
+          preprocessing:
+            - type: CHANGE_PER_SECOND
+              parameters:
+                - ''
+          tags:
+            - tag: Application
+              value: Radius
+        - uuid: 046d0098834b4b5d9fd7db6a12ad0f7b
+          name: FreeRADIUS-Total-Accounting-Responses
+          key: 'radius.acct_status[FreeRADIUS-Total-Accounting-Responses,{$RADIUS_SECRET}]'
+          delay: '30'
+          description: |
+            FreeRADIUS-Total-Accounting-Requests
+            FreeRADIUS-Total-Accounting-Responses
+            FreeRADIUS-Total-Acct-Duplicate-Requests
+            FreeRADIUS-Total-Acct-Malformed-Requests
+            FreeRADIUS-Total-Acct-Invalid-Requests
+            FreeRADIUS-Total-Acct-Dropped-Requests
+            FreeRADIUS-Total-Acct-Unknown-Types
+          preprocessing:
+            - type: CHANGE_PER_SECOND
+              parameters:
+                - ''
+          tags:
+            - tag: Application
+              value: Radius
+        - uuid: be3b370d69484ed092d619c94aff0395
+          name: FreeRADIUS-Total-Acct-Dropped-Requests
+          key: 'radius.acct_status[FreeRADIUS-Total-Acct-Dropped-Requests,{$RADIUS_SECRET}]'
+          delay: '30'
+          description: |
+            FreeRADIUS-Total-Accounting-Requests
+            FreeRADIUS-Total-Accounting-Responses
+            FreeRADIUS-Total-Acct-Duplicate-Requests
+            FreeRADIUS-Total-Acct-Malformed-Requests
+            FreeRADIUS-Total-Acct-Invalid-Requests
+            FreeRADIUS-Total-Acct-Dropped-Requests
+            FreeRADIUS-Total-Acct-Unknown-Types
+          preprocessing:
+            - type: CHANGE_PER_SECOND
+              parameters:
+                - ''
+          tags:
+            - tag: Application
+              value: Radius
+        - uuid: 94b5e5b9fdfe4394b23f3a3af40280d2
+          name: FreeRADIUS-Total-Acct-Duplicate-Requests
+          key: 'radius.acct_status[FreeRADIUS-Total-Acct-Duplicate-Requests,{$RADIUS_SECRET}]'
+          delay: '30'
+          description: |
+            FreeRADIUS-Total-Accounting-Requests
+            FreeRADIUS-Total-Accounting-Responses
+            FreeRADIUS-Total-Acct-Duplicate-Requests
+            FreeRADIUS-Total-Acct-Malformed-Requests
+            FreeRADIUS-Total-Acct-Invalid-Requests
+            FreeRADIUS-Total-Acct-Dropped-Requests
+            FreeRADIUS-Total-Acct-Unknown-Types
+          preprocessing:
+            - type: CHANGE_PER_SECOND
+              parameters:
+                - ''
+          tags:
+            - tag: Application
+              value: Radius
+        - uuid: 731478fe90cd4d7aa046a0a1134314ed
+          name: FreeRADIUS-Total-Acct-Invalid-Requests
+          key: 'radius.acct_status[FreeRADIUS-Total-Acct-Invalid-Requests,{$RADIUS_SECRET}]'
+          delay: '30'
+          description: |
+            FreeRADIUS-Total-Accounting-Requests
+            FreeRADIUS-Total-Accounting-Responses
+            FreeRADIUS-Total-Acct-Duplicate-Requests
+            FreeRADIUS-Total-Acct-Malformed-Requests
+            FreeRADIUS-Total-Acct-Invalid-Requests
+            FreeRADIUS-Total-Acct-Dropped-Requests
+            FreeRADIUS-Total-Acct-Unknown-Types
+          preprocessing:
+            - type: CHANGE_PER_SECOND
+              parameters:
+                - ''
+          tags:
+            - tag: Application
+              value: Radius
+        - uuid: 969da29dca8246efbdf240736aed4ce4
+          name: FreeRADIUS-Total-Acct-Malformed-Requests
+          key: 'radius.acct_status[FreeRADIUS-Total-Acct-Malformed-Requests,{$RADIUS_SECRET}]'
+          delay: '30'
+          description: |
+            FreeRADIUS-Total-Accounting-Requests
+            FreeRADIUS-Total-Accounting-Responses
+            FreeRADIUS-Total-Acct-Duplicate-Requests
+            FreeRADIUS-Total-Acct-Malformed-Requests
+            FreeRADIUS-Total-Acct-Invalid-Requests
+            FreeRADIUS-Total-Acct-Dropped-Requests
+            FreeRADIUS-Total-Acct-Unknown-Types
+          preprocessing:
+            - type: CHANGE_PER_SECOND
+              parameters:
+                - ''
+          tags:
+            - tag: Application
+              value: Radius
+        - uuid: 17e72f14a7da401c918c0b108d9c8d14
+          name: FreeRADIUS-Total-Acct-Unknown-Types
+          key: 'radius.acct_status[FreeRADIUS-Total-Acct-Unknown-Types,{$RADIUS_SECRET}]'
+          delay: '30'
+          description: |
+            FreeRADIUS-Total-Accounting-Requests
+            FreeRADIUS-Total-Accounting-Responses
+            FreeRADIUS-Total-Acct-Duplicate-Requests
+            FreeRADIUS-Total-Acct-Malformed-Requests
+            FreeRADIUS-Total-Acct-Invalid-Requests
+            FreeRADIUS-Total-Acct-Dropped-Requests
+            FreeRADIUS-Total-Acct-Unknown-Types
+          preprocessing:
+            - type: CHANGE_PER_SECOND
+              parameters:
+                - ''
+          tags:
+            - tag: Application
+              value: Radius
+        - uuid: 546369493c184ba197f73621a3a73b68
+          name: 'radius auth check'
+          key: 'radius.auth.test[{$RADIUS_SECRET}]'
+          delay: '30'
+          trends: '0'
+          value_type: TEXT
+          tags:
+            - tag: Application
+              value: Radius
+          triggers:
+            - uuid: 8529c05e22c74bed963e11a91b4a5ff6
+              expression: 'last(/Freeradius3 by Zabbix agent/radius.auth.test[{$RADIUS_SECRET}])<>"(0) -: Expected Access-Accept got Access-Reject"'
+              name: 'Radius auth check'
+              priority: DISASTER
+        - uuid: 056fdc08cfa142ce89989a72e8ba0c43
+          name: FreeRADIUS-Total-Access-Accepts
+          key: 'radius.auth_status[FreeRADIUS-Total-Access-Accepts,{$RADIUS_SECRET}]'
+          delay: '30'
+          description: |
+            FreeRADIUS-Total-Access-Requests = 39157
+            	FreeRADIUS-Total-Access-Accepts = 382
+            	FreeRADIUS-Total-Access-Rejects = 38689
+            	FreeRADIUS-Total-Access-Challenges = 0
+            	FreeRADIUS-Total-Auth-Responses = 39071
+            	FreeRADIUS-Total-Auth-Duplicate-Requests = 87
+            	FreeRADIUS-Total-Auth-Malformed-Requests = 0
+            	FreeRADIUS-Total-Auth-Invalid-Requests = 0
+            	FreeRADIUS-Total-Auth-Dropped-Requests = 87
+            	FreeRADIUS-Total-Auth-Unknown-Types = 0
+          preprocessing:
+            - type: CHANGE_PER_SECOND
+              parameters:
+                - ''
+          tags:
+            - tag: Application
+              value: Radius
+        - uuid: f55fd3649c1a4fdc8b592faabd883d32
+          name: FreeRADIUS-Total-Access-Challenges
+          key: 'radius.auth_status[FreeRADIUS-Total-Access-Challenges,{$RADIUS_SECRET}]'
+          delay: '30'
+          description: |
+            FreeRADIUS-Total-Access-Requests = 39157
+            	FreeRADIUS-Total-Access-Accepts = 382
+            	FreeRADIUS-Total-Access-Rejects = 38689
+            	FreeRADIUS-Total-Access-Challenges = 0
+            	FreeRADIUS-Total-Auth-Responses = 39071
+            	FreeRADIUS-Total-Auth-Duplicate-Requests = 87
+            	FreeRADIUS-Total-Auth-Malformed-Requests = 0
+            	FreeRADIUS-Total-Auth-Invalid-Requests = 0
+            	FreeRADIUS-Total-Auth-Dropped-Requests = 87
+            	FreeRADIUS-Total-Auth-Unknown-Types = 0
+          preprocessing:
+            - type: CHANGE_PER_SECOND
+              parameters:
+                - ''
+          tags:
+            - tag: Application
+              value: Radius
+        - uuid: 86f8e5f0ddd1429f8089da6fb854827b
+          name: FreeRADIUS-Total-Access-Rejects
+          key: 'radius.auth_status[FreeRADIUS-Total-Access-Rejects,{$RADIUS_SECRET}]'
+          delay: '30'
+          description: |
+            FreeRADIUS-Total-Access-Requests = 39157
+            	FreeRADIUS-Total-Access-Accepts = 382
+            	FreeRADIUS-Total-Access-Rejects = 38689
+            	FreeRADIUS-Total-Access-Challenges = 0
+            	FreeRADIUS-Total-Auth-Responses = 39071
+            	FreeRADIUS-Total-Auth-Duplicate-Requests = 87
+            	FreeRADIUS-Total-Auth-Malformed-Requests = 0
+            	FreeRADIUS-Total-Auth-Invalid-Requests = 0
+            	FreeRADIUS-Total-Auth-Dropped-Requests = 87
+            	FreeRADIUS-Total-Auth-Unknown-Types = 0
+          preprocessing:
+            - type: CHANGE_PER_SECOND
+              parameters:
+                - ''
+          tags:
+            - tag: Application
+              value: Radius
+        - uuid: 0ecf1e0d9eef43f683b4ab0faa00756b
+          name: FreeRADIUS-Total-Access-Requests
+          key: 'radius.auth_status[FreeRADIUS-Total-Access-Requests,{$RADIUS_SECRET}]'
+          delay: '30'
+          description: |
+            FreeRADIUS-Total-Access-Requests = 39157
+            	FreeRADIUS-Total-Access-Accepts = 382
+            	FreeRADIUS-Total-Access-Rejects = 38689
+            	FreeRADIUS-Total-Access-Challenges = 0
+            	FreeRADIUS-Total-Auth-Responses = 39071
+            	FreeRADIUS-Total-Auth-Duplicate-Requests = 87
+            	FreeRADIUS-Total-Auth-Malformed-Requests = 0
+            	FreeRADIUS-Total-Auth-Invalid-Requests = 0
+            	FreeRADIUS-Total-Auth-Dropped-Requests = 87
+            	FreeRADIUS-Total-Auth-Unknown-Types = 0
+          preprocessing:
+            - type: CHANGE_PER_SECOND
+              parameters:
+                - ''
+          tags:
+            - tag: Application
+              value: Radius
+        - uuid: eb2edbd3e2d448b0800ed82c8b06fb97
+          name: FreeRADIUS-Total-Auth-Dropped-Requests
+          key: 'radius.auth_status[FreeRADIUS-Total-Auth-Dropped-Requests,{$RADIUS_SECRET}]'
+          delay: '30'
+          description: |
+            FreeRADIUS-Total-Access-Requests = 39157
+            	FreeRADIUS-Total-Access-Accepts = 382
+            	FreeRADIUS-Total-Access-Rejects = 38689
+            	FreeRADIUS-Total-Access-Challenges = 0
+            	FreeRADIUS-Total-Auth-Responses = 39071
+            	FreeRADIUS-Total-Auth-Duplicate-Requests = 87
+            	FreeRADIUS-Total-Auth-Malformed-Requests = 0
+            	FreeRADIUS-Total-Auth-Invalid-Requests = 0
+            	FreeRADIUS-Total-Auth-Dropped-Requests = 87
+            	FreeRADIUS-Total-Auth-Unknown-Types = 0
+          preprocessing:
+            - type: CHANGE_PER_SECOND
+              parameters:
+                - ''
+          tags:
+            - tag: Application
+              value: Radius
+        - uuid: be39918fdce84970952d91e213e3a3e5
+          name: FreeRADIUS-Total-Auth-Duplicate-Requests
+          key: 'radius.auth_status[FreeRADIUS-Total-Auth-Duplicate-Requests,{$RADIUS_SECRET}]'
+          delay: '30'
+          description: |
+            FreeRADIUS-Total-Access-Requests = 39157
+            	FreeRADIUS-Total-Access-Accepts = 382
+            	FreeRADIUS-Total-Access-Rejects = 38689
+            	FreeRADIUS-Total-Access-Challenges = 0
+            	FreeRADIUS-Total-Auth-Responses = 39071
+            	FreeRADIUS-Total-Auth-Duplicate-Requests = 87
+            	FreeRADIUS-Total-Auth-Malformed-Requests = 0
+            	FreeRADIUS-Total-Auth-Invalid-Requests = 0
+            	FreeRADIUS-Total-Auth-Dropped-Requests = 87
+            	FreeRADIUS-Total-Auth-Unknown-Types = 0
+          preprocessing:
+            - type: CHANGE_PER_SECOND
+              parameters:
+                - ''
+          tags:
+            - tag: Application
+              value: Radius
+        - uuid: b1100f798cc5444eab1b2e65f43a1c77
+          name: FreeRADIUS-Total-Auth-Invalid-Requests
+          key: 'radius.auth_status[FreeRADIUS-Total-Auth-Invalid-Requests,{$RADIUS_SECRET}]'
+          delay: '30'
+          description: |
+            FreeRADIUS-Total-Access-Requests = 39157
+            	FreeRADIUS-Total-Access-Accepts = 382
+            	FreeRADIUS-Total-Access-Rejects = 38689
+            	FreeRADIUS-Total-Access-Challenges = 0
+            	FreeRADIUS-Total-Auth-Responses = 39071
+            	FreeRADIUS-Total-Auth-Duplicate-Requests = 87
+            	FreeRADIUS-Total-Auth-Malformed-Requests = 0
+            	FreeRADIUS-Total-Auth-Invalid-Requests = 0
+            	FreeRADIUS-Total-Auth-Dropped-Requests = 87
+            	FreeRADIUS-Total-Auth-Unknown-Types = 0
+          preprocessing:
+            - type: CHANGE_PER_SECOND
+              parameters:
+                - ''
+          tags:
+            - tag: Application
+              value: Radius
+        - uuid: 25ce278daa814de598e048cf6ccb4e6e
+          name: FreeRADIUS-Total-Auth-Malformed-Requests
+          key: 'radius.auth_status[FreeRADIUS-Total-Auth-Malformed-Requests,{$RADIUS_SECRET}]'
+          delay: '30'
+          description: |
+            FreeRADIUS-Total-Access-Requests = 39157
+            	FreeRADIUS-Total-Access-Accepts = 382
+            	FreeRADIUS-Total-Access-Rejects = 38689
+            	FreeRADIUS-Total-Access-Challenges = 0
+            	FreeRADIUS-Total-Auth-Responses = 39071
+            	FreeRADIUS-Total-Auth-Duplicate-Requests = 87
+            	FreeRADIUS-Total-Auth-Malformed-Requests = 0
+            	FreeRADIUS-Total-Auth-Invalid-Requests = 0
+            	FreeRADIUS-Total-Auth-Dropped-Requests = 87
+            	FreeRADIUS-Total-Auth-Unknown-Types = 0
+          preprocessing:
+            - type: CHANGE_PER_SECOND
+              parameters:
+                - ''
+          tags:
+            - tag: Application
+              value: Radius
+        - uuid: 8e153a61b9e040189ada0b8aa5939f26
+          name: FreeRADIUS-Total-Auth-Responses
+          key: 'radius.auth_status[FreeRADIUS-Total-Auth-Responses,{$RADIUS_SECRET}]'
+          delay: '30'
+          description: |
+            FreeRADIUS-Total-Access-Requests = 39157
+            	FreeRADIUS-Total-Access-Accepts = 382
+            	FreeRADIUS-Total-Access-Rejects = 38689
+            	FreeRADIUS-Total-Access-Challenges = 0
+            	FreeRADIUS-Total-Auth-Responses = 39071
+            	FreeRADIUS-Total-Auth-Duplicate-Requests = 87
+            	FreeRADIUS-Total-Auth-Malformed-Requests = 0
+            	FreeRADIUS-Total-Auth-Invalid-Requests = 0
+            	FreeRADIUS-Total-Auth-Dropped-Requests = 87
+            	FreeRADIUS-Total-Auth-Unknown-Types = 0
+          preprocessing:
+            - type: CHANGE_PER_SECOND
+              parameters:
+                - ''
+          tags:
+            - tag: Application
+              value: Radius
+        - uuid: 9e5de3fc47d84520b1f8122c67aaa18d
+          name: FreeRADIUS-Total-Auth-Unknown-Types
+          key: 'radius.auth_status[FreeRADIUS-Total-Auth-Unknown-Types,{$RADIUS_SECRET}]'
+          delay: '30'
+          description: |
+            FreeRADIUS-Total-Access-Requests = 39157
+            	FreeRADIUS-Total-Access-Accepts = 382
+            	FreeRADIUS-Total-Access-Rejects = 38689
+            	FreeRADIUS-Total-Access-Challenges = 0
+            	FreeRADIUS-Total-Auth-Responses = 39071
+            	FreeRADIUS-Total-Auth-Duplicate-Requests = 87
+            	FreeRADIUS-Total-Auth-Malformed-Requests = 0
+            	FreeRADIUS-Total-Auth-Invalid-Requests = 0
+            	FreeRADIUS-Total-Auth-Dropped-Requests = 87
+            	FreeRADIUS-Total-Auth-Unknown-Types = 0
+          preprocessing:
+            - type: CHANGE_PER_SECOND
+              parameters:
+                - ''
+          tags:
+            - tag: Application
+              value: Radius
+      macros:
+        - macro: '{$RADIUS_SECRET}'
+          value: adminsecret
+  graphs:
+    - uuid: 79fdc17133dc4bc3b9e4b9aeef109128
+      name: FreeRADIUS-Accounting
+      graph_items:
+        - color: 199C0D
+          calc_fnc: ALL
+          item:
+            host: 'Freeradius3 by Zabbix agent'
+            key: 'radius.acct_status[FreeRADIUS-Total-Accounting-Requests,{$RADIUS_SECRET}]'
+        - sortorder: '1'
+          color: F63100
+          calc_fnc: ALL
+          item:
+            host: 'Freeradius3 by Zabbix agent'
+            key: 'radius.acct_status[FreeRADIUS-Total-Accounting-Responses,{$RADIUS_SECRET}]'
+        - sortorder: '2'
+          color: 2774A4
+          calc_fnc: ALL
+          item:
+            host: 'Freeradius3 by Zabbix agent'
+            key: 'radius.acct_status[FreeRADIUS-Total-Acct-Dropped-Requests,{$RADIUS_SECRET}]'
+        - sortorder: '3'
+          color: F7941D
+          calc_fnc: ALL
+          item:
+            host: 'Freeradius3 by Zabbix agent'
+            key: 'radius.acct_status[FreeRADIUS-Total-Acct-Duplicate-Requests,{$RADIUS_SECRET}]'
+        - sortorder: '4'
+          color: FC6EA3
+          calc_fnc: ALL
+          item:
+            host: 'Freeradius3 by Zabbix agent'
+            key: 'radius.acct_status[FreeRADIUS-Total-Acct-Invalid-Requests,{$RADIUS_SECRET}]'
+        - sortorder: '5'
+          color: 6C59DC
+          calc_fnc: ALL
+          item:
+            host: 'Freeradius3 by Zabbix agent'
+            key: 'radius.acct_status[FreeRADIUS-Total-Acct-Malformed-Requests,{$RADIUS_SECRET}]'
+        - sortorder: '6'
+          color: C7A72D
+          calc_fnc: ALL
+          item:
+            host: 'Freeradius3 by Zabbix agent'
+            key: 'radius.acct_status[FreeRADIUS-Total-Acct-Unknown-Types,{$RADIUS_SECRET}]'
+    - uuid: ea03641ecb404d88ac87d1ccc4988bab
+      name: FreeRADIUS-Authentication
+      graph_items:
+        - color: '000096'
+          item:
+            host: 'Freeradius3 by Zabbix agent'
+            key: 'radius.auth_status[FreeRADIUS-Total-Access-Requests,{$RADIUS_SECRET}]'
+        - sortorder: '1'
+          item:
+            host: 'Freeradius3 by Zabbix agent'
+            key: 'radius.auth_status[FreeRADIUS-Total-Access-Accepts,{$RADIUS_SECRET}]'
+        - sortorder: '2'
+          color: '960000'
+          item:
+            host: 'Freeradius3 by Zabbix agent'
+            key: 'radius.auth_status[FreeRADIUS-Total-Access-Rejects,{$RADIUS_SECRET}]'
+        - sortorder: '4'
+          color: F63100
+          calc_fnc: ALL
+          item:
+            host: 'Freeradius3 by Zabbix agent'
+            key: 'radius.auth_status[FreeRADIUS-Total-Auth-Dropped-Requests,{$RADIUS_SECRET}]'
+        - sortorder: '5'
+          color: 2774A4
+          calc_fnc: ALL
+          item:
+            host: 'Freeradius3 by Zabbix agent'
+            key: 'radius.auth_status[FreeRADIUS-Total-Auth-Duplicate-Requests,{$RADIUS_SECRET}]'
+        - sortorder: '6'
+          color: F7941D
+          calc_fnc: ALL
+          item:
+            host: 'Freeradius3 by Zabbix agent'
+            key: 'radius.auth_status[FreeRADIUS-Total-Auth-Invalid-Requests,{$RADIUS_SECRET}]'
+        - sortorder: '7'
+          color: FC6EA3
+          calc_fnc: ALL
+          item:
+            host: 'Freeradius3 by Zabbix agent'
+            key: 'radius.auth_status[FreeRADIUS-Total-Auth-Malformed-Requests,{$RADIUS_SECRET}]'
+        - sortorder: '8'
+          color: 6C59DC
+          calc_fnc: ALL
+          item:
+            host: 'Freeradius3 by Zabbix agent'
+            key: 'radius.auth_status[FreeRADIUS-Total-Auth-Responses,{$RADIUS_SECRET}]'
+        - sortorder: '9'
+          color: C7A72D
+          calc_fnc: ALL
+          item:
+            host: 'Freeradius3 by Zabbix agent'
+            key: 'radius.auth_status[FreeRADIUS-Total-Auth-Unknown-Types,{$RADIUS_SECRET}]'
