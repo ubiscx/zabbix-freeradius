@@ -51,5 +51,7 @@ and restart/reload your RADIUS server. You will notice that a new server listens
 
 #####2. Add configuration userparameter_radius.conf in zabbix-agent
 
-#####3. Import zabbix-freeradius-template
+#####3. Freeradius3 by Zabbix agent.yaml template.
 Change macros {$RADIUS_SECRET} for password . (default adminsecret)
+
+#####4. If you need working trigger "radius auth check" you need active NAS with secret {$RADIUS_SECRET}.
